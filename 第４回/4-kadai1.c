@@ -10,6 +10,11 @@ int main(int argc,char* argv[]){
 		fscanf(stdin,"%d",&a);
 	}
 	if(a%(3*5*7)==0)fprintf(stdout,"公倍数\n");
-	else fprintf(stdout,"公倍数ではない\n");
+	else{
+	fprintf(stdout,"公倍数ではない\n");
+	if(a%3!=0)fprintf(stdout,"3で割り切れない\n");
+	if(a%5!=0)fprintf(stdout,"5で割り切れない\n");
+	if(a%7!=0)fprintf(stdout,"7で割り切れない\n");
+	}
 	return EXIT_SUCCESS;
 }
